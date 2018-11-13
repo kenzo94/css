@@ -8,9 +8,11 @@
     div{
       border: 1px solid black;
     }
+    /* jede verlinkung nach li */
      li a{
       color: violet;
     }
+    /* jede verlinkung nach div */
     div a {
       color: green;
     }
@@ -24,16 +26,32 @@
     .bio-box{
       /* zugriff auf class */
       border: 1px solid black;
+      width: 75%;
     }
+    /* jede verlinkung mit bio-box als class */
     .bio-box a{
-      color: red;
+      color: green;
     }
     #list-item{
       color: orange;
     }
     .box-box{
-      background-color: azure;
+      background-color: yellow;
     }
+    .alert{
+      background: red;
+    }
+    /* mischung aus id und class um elemente anzusprechen die
+    eine id und class zugewiesen sind*/
+    #exec-bio.alert{
+      background: red;
+    }
+    /*die letzte änderung wird dann von browser aufgenommen wenn es
+     konflikte gibt */
+    .biobox{
+      width: 50%;
+    }
+
   </style>
 </head>
 
@@ -51,7 +69,8 @@
     </li>
   </ul>
   <h2>I'm an h2</h2>
-  <div id="exec-bio" class="bio-box box-box">
+  <!-- dieses div hat eine id und class -->
+  <div id="exec-bio" class="bio-box box-box alert">
     <a href="http://example.com/">I'm a link</a>
   </div>
   <div class="bio-box box-box">
@@ -60,7 +79,7 @@
   <div class="bio-box box-box">
     <a href="http://example.com/">I'm a link</a>
   </div>
-  <div class="bio-box box-box">
+  <div class="bio-box box-box alert">
     <a href="http://example.com/">I'm a link</a>
   </div>
 </body>
