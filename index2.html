@@ -3,44 +3,100 @@
   <head>
     <title>Test Page: Don't Panic</title>
     <meta charset="utf-8">
+
     <style>
+
       /* GLOBAL STYLES */
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 7vw;
+        margin-top: 0;
+      }
       a {
         color: #f00;
       }
+      h2{
+        font-size: 30px;
+      }
+      /* body{
+        height: 800px;
+      } */
+
+          /* html {
+      font-size: 18px;
+    } proportionale gewichtung der fonts durch 1rem*/
+
+    /* HERO STYLES */
+      .full-hero {
+        background-color: #c7dbfc;
+        height: 50vh;
+        width: 50vh;
+      }
       /* BIO STYLES */
-      div.bio-box {
-        border: 1px solid black;
+      /* höhere gewichtung wenn : div.bio-box */
+      .bio-box {
+        border: 1px solid red;
+        width: 50%;
+        margin: 10%;
+        font-size: 1rem;
+        padding: 1em;
       }
       .bio-copy a {
         color: green;
+      }
+      /* px sollte für width von border genutzt werden */
+      /* % so benutzen die bio-box 50% von den bio-wrapper parent */
+      /* .bio-box{
+        border: 1px solid black;
+        width: 50%;
+        margin: 10%;
+         font-size: 150%
+      } */
+      .bio-wrapper{
+        border: 1px solid black;
+        font-size: 24px;
+      }
+      .bio-copy{
+        border: 1px solid blue;
+        font-size: 1em; /*em gut für font-size da sie automatisch die parent size einehmen
+        im beispiel 50% von 24px*/
+        /* font-size: 150%; */
+      }
+      .bio-box h3 {
+        font-size: 1.5em;
       }
       /* in combi stärker als .bio-box a */
       /* davor war: a.social-link*/
       /* SOCIAL STYLES */
       .social-link{
         color: blue;
-      }
-      div{
-        border: 1px solid green;
+        background: rgba(150, 150, 150, 0.2);
       }
 
     </style>
   </head>
-  <body>
 
+  <body>
+    <!-- <div style="border:1px solid #000;width: 50%;height:100%;">I'm a percent -->
+        <!-- test</div> -->
+  <div class="full-hero hero-home">
     <h1 class="social-link">I'm an h1</h1>
     <ul>
       <li>
-        <a href="index1.html">index1</a>
+        <a href="index.html" class="social-link">Zu index 1</a>
       </li>
       <li>
-        <a href="http://example.com/">Link</a>
+        <a href="http://example.com/" class="social-link">Link</a>
       </li>
       <li>
-        <a href="http://example.com/">Link</a>
+        <a href="http://example.com/" class="social-link">Link</a>
       </li>
     </ul>
+  </div>
+    <div class="bio-wrapper">
     <h2>I'm an h2</h2>
     <div class="bio-box">
       <h3>Michael Hartl</h3>
@@ -90,6 +146,7 @@
       <p>
         The Future
       </p>
+    </div>
     </div>
   </body>
 </html>
