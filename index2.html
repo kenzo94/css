@@ -33,7 +33,7 @@
       .full-hero {
         background-color: #c7dbfc;
         height: 50vh;
-        width: 50vh;
+        width: 100vh;
       }
       /* BIO STYLES */
       /* höhere gewichtung wenn : div.bio-box */
@@ -74,7 +74,32 @@
       .social-link{
         color: blue;
         background: rgba(150, 150, 150, 0.2);
+        display: inline-block;
+        height: 40px;
+        width: 50px;
+        margin: 20px;
       }
+      .show{
+      display: block;
+      }
+      .full-hero li {
+        display: inline;
+      }
+
+     /*test padding margin  */
+     .test-box {
+         background: #9db6dd;
+         margin: 50px;
+         width: 200px;
+       }
+       .test-box-nosizing {
+         border: 10px solid #000;
+         padding: 40px;
+       }
+       .test-box-sizing {
+         box-sizing: border-box;
+         width: auto;
+       }
 
     </style>
   </head>
@@ -82,14 +107,14 @@
   <body>
     <!-- <div style="border:1px solid #000;width: 50%;height:100%;">I'm a percent -->
         <!-- test</div> -->
-  <div class="full-hero hero-home">
-    <h1 class="social-link">I'm an h1</h1>
+  <div class="full-hero">
+    <h1>I'm an h1</h1>
     <ul>
       <li>
-        <a href="index.html" class="social-link">Zu index 1</a>
+        <a href="index.html" class="social-link">zu index 1</a>
       </li>
       <li>
-        <a href="http://example.com/" class="social-link">Link</a>
+        <a href="index3.html" class="social-link">zu index 3</a>
       </li>
       <li>
         <a href="http://example.com/" class="social-link">Link</a>
@@ -98,6 +123,19 @@
   </div>
     <div class="bio-wrapper">
     <h2>I'm an h2</h2>
+
+    <!-- test -->
+    <div class="test-box">
+        200px wide
+      </div>
+    <div class="test-box test-box-nosizing">
+        200px wide + border + padding = 300px
+      </div>
+      <div class="test-box test-box-nosizing test-box-sizing">
+        200px wide + border + padding + box-sizing: border-box = 200px
+      </div>
+    <!--  -->
+
     <div class="bio-box">
       <h3>Michael Hartl</h3>
       <a href="http://twitter.com/mhartl" class="social-link">here</a>
