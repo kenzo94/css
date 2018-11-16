@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>test Page: Dont Panic</title>
+  <style>
+    div{
+      border: 1px solid black;
+    }
+    /* jede verlinkung nach li */
+     li a{
+      color: violet;
+    }
+    /* jede verlinkung nach div */
+    div a {
+      color: green;
+    }
+    li{
+      border: 1px solid black;
+    }
+    #exec-bio{
+      /* zugriff auf id */
+      background-color: lightgray;
+    }
+    .bio-box{
+      /* zugriff auf class */
+      border: 1px solid black;
+      width: 75%;
+    }
+    /* jede verlinkung mit bio-box als class */
+    .bio-box a{
+      color: green;
+    }
+    #list-item{
+      color: orange;
+    }
+    .box-box{
+      background-color: yellow;
+    }
+    .alert{
+      background: red;
+    }
+    /* mischung aus id und class um elemente anzusprechen die
+    eine id und class zugewiesen sind*/
+    #exec-bio.alert{
+      background: red;
+    }
+    /*die letzte änderung wird dann von browser aufgenommen wenn es
+     konflikte gibt */
+    .biobox{
+      width: 50%;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>I'm an h1</h1>
+  <ul>
+    <li id="list-item">
+      <a href="index2.html">index2</a>
+    </li>
+    <li>
+      <a href="http://example.com/">Link</a>
+    </li>
+    <li>
+      <a href="http://example.com/">Link</a>
+    </li>
+  </ul>
+  <h2>I'm an h2</h2>
+  <!-- dieses div hat eine id und class -->
+  <div id="exec-bio" class="bio-box box-box alert">
+    <a href="http://example.com/">I'm a link</a>
+  </div>
+  <div class="bio-box box-box">
+    <a href="http://example.com/">I'm a link</a>
+  </div>
+  <div class="bio-box box-box">
+    <a href="http://example.com/">I'm a link</a>
+  </div>
+  <div class="bio-box box-box alert">
+    <a href="http://example.com/">I'm a link</a>
+  </div>
+</body>
+
+</html>
